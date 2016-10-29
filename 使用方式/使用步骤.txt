@@ -1,4 +1,4 @@
-1¡¢ÔÚ²¼¾ÖÎÄ¼şÖĞ¶¨ÒåÒÀ¸½¿Ø¼ş(ÒªÕ¹Ê¾ÔÚÒÀ¸½¿Ø¼şÉÏ)
+1ã€åœ¨å¸ƒå±€æ–‡ä»¶ä¸­å®šä¹‰ä¾é™„æ§ä»¶(è¦å±•ç¤ºåœ¨ä¾é™„æ§ä»¶ä¸Š)
 	<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
 		android:layout_width="match_parent"
 		android:layout_height="match_parent" >
@@ -14,7 +14,7 @@
 			android:textColor="@android:color/white"
 			android:textSize="12sp" />
 	</RelativeLayout>
-2¡¢ÔÚÒªÕ¹Ê¾µÄµØ·½³õÊ¼»¯GooView¿Ø¼ş¼°Æä¼àÌıÆ÷
+2ã€åœ¨è¦å±•ç¤ºçš„åœ°æ–¹åˆå§‹åŒ–GooViewæ§ä»¶åŠå…¶ç›‘å¬å™¨
 	private void initView() {
 		TextView tvPoint = (TextView) findViewById(R.id.point);
 		tvPoint.setText("10");
@@ -23,13 +23,13 @@
 			@Override
 			public void onDisappear(PointF mDragCenter) {
 				super.onDisappear(mDragCenter);
-				Toast.makeText(MainActivity.this, "ÏûÊ§ÁË", 0).show();
+				Toast.makeText(MainActivity.this, "æ¶ˆå¤±äº†", 0).show();
 			}
 
 			@Override
 			public void onReset(boolean isOutOfRange) {
 				super.onReset(isOutOfRange);
-				Toast.makeText(MainActivity.this, "ÖØÖÃÁË", 0).show();
+				Toast.makeText(MainActivity.this, "é‡ç½®äº†", 0).show();
 			}
 		};
 		tvPoint.setOnTouchListener(listener);
