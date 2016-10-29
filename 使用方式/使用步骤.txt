@@ -1,0 +1,45 @@
+1、在布局文件中定义依附控件(要展示在依附控件上)
+	<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent" >
+		<TextView
+			android:id="@+id/point"
+			android:layout_width="32dp"
+			android:layout_height="32dp"
+			android:layout_centerInParent="true"
+			android:background="@drawable/red_bg"
+			android:gravity="center"
+			android:singleLine="true"
+			android:text="10"
+			android:textColor="@android:color/white"
+			android:textSize="12sp" />
+	</RelativeLayout>
+2、在要展示的地方初始化GooView控件及其监听器
+	private void initView() {
+		TextView tvPoint = (TextView) findViewById(R.id.point);
+		tvPoint.setText("10");
+		tvPoint.setTag(10);
+		GooViewListener listener = new GooViewListener(this, tvPoint) {
+			@Override
+			public void onDisappear(PointF mDragCenter) {
+				super.onDisappear(mDragCenter);
+				Toast.makeText(MainActivity.this, "消失了", 0).show();
+			}
+
+			@Override
+			public void onReset(boolean isOutOfRange) {
+				super.onReset(isOutOfRange);
+				Toast.makeText(MainActivity.this, "重置了", 0).show();
+			}
+		};
+		tvPoint.setOnTouchListener(listener);
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
